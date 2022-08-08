@@ -176,5 +176,4 @@ public class ConsoleInteractor
             Console.WriteLine(e.ToString());
         }
     }
-
 }

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="patterns_laba_3.Commands.ConditionerOffCommand" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Commands\ConditionerOffCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_conditioner" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="patterns_laba_3.Commands.ConditionerOnCommand" BaseTypeListCollapsed="true">
+    <Position X="7" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Commands\ConditionerOnCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_conditioner" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="patterns_laba_3.Commands.DoorCloseCommand" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\DoorCloseCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_door" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="patterns_laba_3.Commands.DoorOpenCommand" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\DoorOpenCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_door" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="patterns_laba_3.Commands.LampsOffCommand" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\LampsOffCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_lamps" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="patterns_laba_3.Commands.LampsOnCommand" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\LampsOnCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_lamps" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="patterns_laba_3.Invoker.Pult">
+    <Position X="4.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAACAAAEAAAAAAAAAAAAAADAAAAA=</HashCode>
+      <FileName>Invoker\Pult.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_commands" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="patterns_laba_3.Receivers.Conditioner">
+    <Position X="6" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Receivers\Conditioner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="patterns_laba_3.Receivers.Door">
+    <Position X="10.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Receivers\Door.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="patterns_laba_3.Receivers.Lamp">
+    <Position X="14.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Receivers\Lamp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="patterns_laba_3.ConsoleInteractor">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <AssociationLine Name="_conditioner" Type="patterns_laba_3.Receivers.Conditioner" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.938" Y="9.007" />
+        <Point X="2.938" Y="13.874" />
+        <Point X="6" Y="13.874" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_door" Type="patterns_laba_3.Receivers.Door" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.938" Y="9.007" />
+        <Point X="2.938" Y="15.122" />
+        <Point X="11.188" Y="15.122" />
+        <Point X="11.188" Y="14.747" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_lamps" Type="patterns_laba_3.Receivers.Lamp" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.938" Y="9.007" />
+        <Point X="2.938" Y="15.122" />
+        <Point X="15.312" Y="15.122" />
+        <Point X="15.312" Y="14.747" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_pult" Type="patterns_laba_3.Invoker.Pult" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="7.375" />
+        <Point X="4.75" Y="7.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEBAAAAAAAAgAAAAAAAQAAAAAAAAEBAAIAAAAAARAAI=</HashCode>
+      <FileName>ConsoleInteractor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_conditioner" />
+      <Field Name="_door" />
+      <Field Name="_pult" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_lamps" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="patterns_laba_3.Commands.ICommand">
+    <Position X="10.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
