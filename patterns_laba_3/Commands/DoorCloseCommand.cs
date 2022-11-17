@@ -2,6 +2,7 @@
 
 namespace patterns_laba_3.Commands;
 
+// команда для закрытия двери
 public class DoorCloseCommand : ICommand
 {
     private readonly Door _door;
@@ -11,6 +12,7 @@ public class DoorCloseCommand : ICommand
         _door = door;
     }
 
+    // Открыть дверь если она открыто
     public void Execute()
     {
         if (_door.IsOpen)

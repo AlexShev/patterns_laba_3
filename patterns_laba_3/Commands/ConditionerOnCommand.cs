@@ -2,6 +2,7 @@
 
 namespace patterns_laba_3.Commands;
 
+// команда для включения кондиционера
 public class ConditionerOnCommand : ICommand
 {
     private readonly Conditioner _conditioner;
@@ -11,6 +12,7 @@ public class ConditionerOnCommand : ICommand
         _conditioner = conditioner;
     }
 
+    // Включить кондиционер, если он не включен
     public void Execute()
     {
         if (_conditioner.IsTurnOn)

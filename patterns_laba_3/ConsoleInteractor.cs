@@ -6,8 +6,11 @@ namespace patterns_laba_3;
 
 public class ConsoleInteractor
 {
+    // Лампы
     private readonly IList<Lamp> _lamps;
+    // Дверь
     private readonly Door _door;
+    // Кондиционер
     private readonly Conditioner _conditioner;
 
     private readonly Pult _pult;
@@ -27,6 +30,7 @@ public class ConsoleInteractor
 
         _conditioner = new Conditioner();
 
+        // создание и настройка пульта
         _pult = new Pult();
 
         _pult.Add(PultsCommands.ConditionerOn, new ConditionerOnCommand(_conditioner));
@@ -39,6 +43,7 @@ public class ConsoleInteractor
         _pult.Add(PultsCommands.LampsOff, new LampsOffCommand(_lamps));
     }
 
+    // Показать состояние вещей в доме
     private void ShowState()
     {
         Console.WriteLine($"Дверь {(_door.IsOpen ? "открыта" : "закрыта")}");
@@ -59,6 +64,7 @@ public class ConsoleInteractor
         }
     }
 
+    // Показать меню
     private void ShowMenu()
     {
         Console.WriteLine($"{0} - Выйти");
@@ -78,6 +84,7 @@ public class ConsoleInteractor
 
     }
 
+    // Запросить ввод
     private static string? ReadLine()
     {
         Console.Write(">> ");
@@ -85,6 +92,7 @@ public class ConsoleInteractor
         return Console.ReadLine();
     }
 
+    // Запросить число
     private static int ReadInt()
     {
         string? s = ReadLine();
@@ -97,6 +105,7 @@ public class ConsoleInteractor
             return -1;
     }
 
+    // Запросить подтверждение
     private static bool Confirmation()
     {
         Console.WriteLine("Для подтверждения нажмите 1");
@@ -123,6 +132,7 @@ public class ConsoleInteractor
 
             ShowMenu();
             
+            // Запрос очередной команды
             do {
                 operation = ReadInt();
 
